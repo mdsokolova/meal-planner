@@ -52,3 +52,62 @@ button:focus-visible {
   outline: 3px solid #b47b38;
   outline-offset: 3px;
 }
+
+
+.day-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  display: grid;
+  gap: 12px;
+}
+
+.day-button {
+  width: 100%;
+  text-align: left;
+  background: white;
+  color: #263c32;
+  border: 2px solid #e0e5dc;
+}
+
+.day-button:hover {
+  background: #edf2e9;
+}
+
+.day-button.selected {
+  background: #e1eddd;
+  border-color: #365c45;
+}
+.meal-editor {
+  background: white;
+  border: 1px solid #e0e5dc;
+  border-radius: 20px;
+  padding: 24px;
+  margin-top: 28px;
+}
+
+.meal-editor label {
+  display: block;
+  margin: 20px 0 8px;
+  font-weight: 600;
+}
+
+.meal-editor input,
+.meal-editor textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bbc8bc;
+  border-radius: 10px;
+  background: #fcfcf9;
+  color: #263c32;
+}
+
+.meal-editor textarea {
+  resize: vertical;
+}
+
+.meal-editor input:focus,
+.meal-editor textarea:focus {
+  outline: 2px solid #365c45;
+  outline-offset: 2px;
+}
