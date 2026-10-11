@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f7f5ef;
+  color: #263c32;
+  font-family: Arial, sans-serif;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+.meal-planner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.meal-planner h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -1px;
+}
+
+.meal-planner p {
+  margin: 0 0 28px;
+  color: #647269;
+  line-height: 1.6;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #365c45;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #284735;
+}
+
+button:focus-visible {
+  outline: 3px solid #b47b38;
+  outline-offset: 3px;
+}
