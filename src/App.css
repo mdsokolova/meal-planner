@@ -111,3 +111,12 @@ button:focus-visible {
   outline: 2px solid #365c45;
   outline-offset: 2px;
 }
+
+.delete-button {
+  margin-top: 24px;
+  background: #a13d32;
+}
+
+.delete-button:hover {
+  background: #812f26;
+}

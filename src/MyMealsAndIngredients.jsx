@@ -1,4 +1,4 @@
-function MyMealsAndIngredients({ selectedDay, updateDay }) {
+function MyMealsAndIngredients({ selectedDay, updateDay, deleteDay }) {
   if (!selectedDay) {
     return <p>Select a day or add one to start planning.</p>;
   }
@@ -8,11 +8,20 @@ function MyMealsAndIngredients({ selectedDay, updateDay }) {
       ...selectedDay,
       [field]: value,
     });
+
   }
 
   return (
+    
     <section className="meal-editor">
       <h2>Edit your day</h2>
+<button
+        type="button"
+        className="delete-button"
+        onClick={() => deleteDay(selectedDay.id)}
+      >
+        Delete day
+      </button>
 
       <label htmlFor="day-title">Day or title</label>
       <input

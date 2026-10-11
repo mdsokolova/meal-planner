@@ -1,10 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import MyList from './MyList';
 import MyMealsAndIngredients from './MyMealsAndIngredients';
 
 function App() {
-  const [mealPlans, setMealPlans] = useState([]);
+  const [mealPlans, setMealPlans] = useState(() => {
+  try {
+    const savedPlans = localStorage.getItem('meal-plans');
+    return savedPlans ? JSON.parse(savedPlans) : [];
+  } catch {
+    return [];
+  }
+});
   const [selectedDayId, setSelectedDayId] = useState(null);
 
   function addMeal() {
@@ -33,6 +40,13 @@ function App() {
       )
     );
   }
+  function deleteDay(dayId) {
+  setMealPlans((previousPlans) =>
+    previousPlans.filter((meal) => meal.id !== dayId)
+  );
+
+  setSelectedDayId(null);
+}
 
   return (
     <main className="meal-planner">
@@ -46,10 +60,13 @@ function App() {
       setSelectedDayId={setSelectedDayId}
       
       />
-      <MyMealsAndIngredients
-        selectedDay={selectedDay}
-        updateDay={updateDay}
-      />
+    
+<MyMealsAndIngredients
+  selectedDay={selectedDay}
+  updateDay={updateDay}
+  deleteDay={deleteDay}
+/>
+    
 
     
     </main>
