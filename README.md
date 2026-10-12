@@ -1,16 +1,26 @@
-# React + Vite
+# Meal Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React meal planner built with Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add, select and delete days.
+- Edit each day's title, meals and ingredients.
+- Automatically save plans in browser localStorage.
+- Responsive layout for wide and small screens.
 
-## React Compiler
+## Run locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+npm install
+npm run dev
 
-## Expanding the ESLint configuration
+## Checks
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+npm run build
+npm run lint
+
+## Storage
+
+Plans are saved in the current browser for this site.
+They do not sync between devices.
+Clearing the browser's site data removes the saved plans.

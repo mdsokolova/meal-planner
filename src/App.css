@@ -120,3 +120,35 @@ button:focus-visible {
 .delete-button:hover {
   background: #812f26;
 }
+
+
+
+.meal-planner h1,
+.meal-planner h2 {
+  color: #263c32;
+}
+
+.meal-planner h2 {
+  font-size: 1.4rem;
+  margin: 0 0 20px;
+}
+.planner-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.planner-layout > * {
+  min-width: 0;
+}
+
+.meal-editor {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .planner-layout {
+    grid-template-columns: 1fr;
+  }
+}

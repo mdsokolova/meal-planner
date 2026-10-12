@@ -13,6 +13,10 @@ function App() {
   }
 });
   const [selectedDayId, setSelectedDayId] = useState(null);
+  
+useEffect(() => {
+  localStorage.setItem('meal-plans', JSON.stringify(mealPlans));
+}, [mealPlans]);
 
   function addMeal() {
     const newMeal = {
@@ -52,7 +56,7 @@ function App() {
     <main className="meal-planner">
       <h1>Meal Planner</h1>
       <p>Plan your meals and keep your ingredients together.</p>
-
+<div className="planner-layout">
       <MyList mealPlans={mealPlans} 
       addMeal={addMeal}
       selectedDayId={selectedDayId}
@@ -67,7 +71,7 @@ function App() {
   deleteDay={deleteDay}
 />
     
-
+</div>
     
     </main>
   );
